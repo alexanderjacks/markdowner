@@ -4,7 +4,7 @@
 ## 🛵 Use
 - ```cd markdowner/``` (Go to this directory in Terminal.)
 - ```python3 markdowner.py```
-- Note: does not yet generate markdown files, but prints to Terminal
+- Creates files in ./mds/
 
 ## 🔬 Detailed Function
 Takes provided CSV & makes each line into a Markdown file.
@@ -13,11 +13,12 @@ Takes provided CSV & makes each line into a Markdown file.
 3. Runs a ```while``` loop: 
 * Builds a list of fields per line  ```.append()```
 * Prints 1st list's items-- 2nd list is junk syntax from earlier
-* Loops back to print next CSV line of py list items
+* Loops back to print next line of py list items
+4. Writes all generated markdown to a file ```stdout_put.md```
 
 ## 🚩 Development Milestones
+✅ indent and add correct characters before/after fields
 + create Markdown (.md) file per record (CSV line)
-+ indent and add correct characters before/after fields
 
 + add user prompts to script
 * modify markdown filename instead of defaulting to 1st field value

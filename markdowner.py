@@ -2,7 +2,7 @@
 
 # R&D to direct all prints to an output file
 import sys
-sys.stdout = open('stdout_put.md','wt')
+sys.stdout = open('./mds/stdout_put.md','wt')
 
 # ready to open CSV
 filename = "heroes.csv"
