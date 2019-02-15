@@ -1,5 +1,5 @@
 # Markdowner 🔪🔠🐍
-![https://github.com/alexanderjacks](## alexanderjacks)
+[https://github.com/alexanderjacks](## alexanderjacks)
 
 ## 🛵 Use
 - ```cd markdowner/``` (Go to this directory in Terminal.)
