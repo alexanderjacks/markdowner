@@ -21,12 +21,16 @@ while z < records_total:
 	hero_content.append(line_of_content[0].split(','))
 	
 	# # # BEGIN PRINTING .md FILE # # #
+	# map fields to vars
 	title = hero_content[0][0]
 	description = hero_content[0][1]
 	tag1 = hero_content[0][2]
 	tag2 = hero_content[0][3]
 	tag3 = hero_content[0][4]
 	tag4 = hero_content[0][5]
+	ally1 = hero_content[0][6]
+	ally2 = hero_content[0][7]
+	ally3 = hero_content[0][8]
 
 	# to print the static md
 	print("---")
@@ -43,7 +47,7 @@ while z < records_total:
 	print(f"  -  {tag1}")
 	print(f"  -  {tag2}")
 	print(f"  -  {tag3}")
-	# conditional ctrl for final value that's not always there
+	# conditional ctrl for final value that's not always there;
 	try:
 		if tag4:
 			print(f"  -  {tag4}")
@@ -51,20 +55,18 @@ while z < records_total:
 		break
 
 	# to print the allies
-	print("ally test zone, will resolve number of allies below:")
-	# find as many allies as exist, save into list
-	allylist = []
-	# print each ally list item, iterate & interpolate into md
-	
+	print("allies:")
+	print(f"  -  {ally1}")
+	print(f"  -  {ally2}")
+	print(f"  -  {ally3}")
 
 	# to print the image location
 	print("---")
 	print(f"![{title}](/img/{title}.png)")
 
-	# goal now is to write~print each list member to a file w file name item[0]
-
-
 	# # # END PRINTING .md FILE # # #
+
+	# goal now is to write~print each list member to a file w file name item[0]
 
 	# this loop climbs to len()-2 from 0
 	z += 1
