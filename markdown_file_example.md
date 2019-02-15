@@ -1,8 +1,7 @@
 ---
 templateKey: 'blog-post'
 title: Hongyeom
-description: >-
-  Vermillion Bird
+description: Vermillion Bird
 tags:
   - rock
   - area attack

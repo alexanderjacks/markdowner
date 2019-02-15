@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
-# R&D to direct all prints to an output file
+# lib to allow print() to target an output file
 import sys
-sys.stdout = open('./mds/stdout_put.md','wt')
 
 # ready to open CSV
 filename = "heroes.csv"
@@ -35,6 +34,9 @@ while z < records_total:
 	ally1 = hero_content[0][6]
 	ally2 = hero_content[0][7]
 	ally3 = hero_content[0][8]
+
+	# create markdown file for list
+	sys.stdout = open(f'./mds/{title}.md','wt')
 
 	# to print the static md
 	print("---")
@@ -76,6 +78,6 @@ while z < records_total:
 	z += 1
 	
 
-# unbreak python!
+# unbreak python! fix core cmd back to default
 sys.stdout = sys.__stdout__
 
