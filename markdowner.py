@@ -36,7 +36,7 @@ while z < records_total:
 	ally3 = hero_content[0][8]
 
 	# create markdown file for list
-	sys.stdout = open(f'./mds/{title}.md','wt')
+	sys.stdout = open(f'./mds/{title.lower()}.md','wt')
 
 	# to print the static md
 	print("---")
