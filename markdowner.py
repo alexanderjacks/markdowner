@@ -6,23 +6,68 @@ filename = "heroes.csv"
 # opens CSV data as list of lists
 with open(filename) as fn:
 	raw_content = fn.readlines()
-	# learns number of records in CSV data
-	record_total = len(raw_content)
+	# learns number of records in CSV data, offsets (why by 2? CSV header is 1 extra line)
+	records_total = len(raw_content) - 2
 	# removes carriagereturn chars leaves only newlines to mark lines
 	cleaner_content = [x.split('\r') for x in raw_content]
 
-# readies to print list items from front to back (negative index asending)
-z = (record_total*-1)
-while z < 0:
+# readies to print list items from first to last
+z = 0
+while z < records_total:
 	# lists each line in data
 	line_of_content = cleaner_content[z]
-	# juggling data types: needs refactoring
-	ara = []
-	ara.append(line_of_content[0].split(','))
-	# back down to 1-level array with all members strings
-	print(ara[0])
-	# this loop iterates negative index asending; climbs to 0 from -len()
+	# juggling data types: could use refactoring
+	hero_content = []
+	hero_content.append(line_of_content[0].split(','))
+	
+	# # # BEGIN PRINTING .md FILE # # #
+	title = hero_content[0][0]
+	description = hero_content[0][1]
+	tag1 = hero_content[0][2]
+	tag2 = hero_content[0][3]
+	tag3 = hero_content[0][4]
+	tag4 = hero_content[0][5]
+
+	# to print the static md
+	print("---")
+	print("templateKey: 'blog-post'")
+	
+	# to print the title field
+	print("title: %(title)s" % locals())
+	
+	# to print the description field
+	print("description: %(description)s" % locals())
+
+	# to print the tags
+	print("tags:")
+	print("  -  %(tag1)s" % locals())
+	print("  -  %(tag2)s" % locals())
+	print("  -  %(tag3)s" % locals())
+	# conditional ctrl for final value that's not always there
+	try:
+		if tag4:
+			print("  -  %(tag4)s" % locals())
+	except:
+		break
+
+	# to print the allies
+	print("ally test zone, will resolve number of allies below:")
+	# find as many allies as exist, save into list
+	allylist = []
+	# print each ally list item, iterate & interpolate into md
+	
+
+	# to print the image location
+	print("---")
+	print("![%(title)s](/img/%(title)s.png)" % locals())
+
+	# goal now is to write~print each list member to a file w file name item[0]
+
+
+	# # # END PRINTING .md FILE # # #
+
+	# this loop climbs to len()-2 from 0
 	z += 1
-	# goal now is to print each list member in sequence, with needed markdown
+	
 
 
