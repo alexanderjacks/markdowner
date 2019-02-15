@@ -17,12 +17,11 @@ Takes provided CSV & makes each line into a Markdown file.
 4. Writes all generated markdown to a file ```stdout_put.md```
 
 ## 🚩 Development Milestones
-✅ indent and add correct characters before/after fields
-✅ create Markdown (.md) file per record (CSV line)
-
-* add user prompts to script
-* modify markdown filename instead of defaulting to 1st field value
-* further custom options will be noted useful as development continues
+ - ✅ indent and add correct characters before/after fields
+ - ✅ create Markdown (.md) file per record (CSV line)
+ - add user prompts to script
+ - modify markdown filename instead of defaulting to 1st field value
+ - further custom options will be noted useful as development continues
 
 ## 📝 MIT License.
 ### Alexander Jacks, 2019.
