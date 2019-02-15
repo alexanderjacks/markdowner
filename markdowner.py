@@ -33,20 +33,20 @@ while z < records_total:
 	print("templateKey: 'blog-post'")
 	
 	# to print the title field
-	print("title: %(title)s" % locals())
+	print(f"title: {title}")
 	
 	# to print the description field
-	print("description: %(description)s" % locals())
+	print(f"description: {description}")
 
 	# to print the tags
 	print("tags:")
-	print("  -  %(tag1)s" % locals())
-	print("  -  %(tag2)s" % locals())
-	print("  -  %(tag3)s" % locals())
+	print(f"  -  {tag1}")
+	print(f"  -  {tag2}")
+	print(f"  -  {tag3}")
 	# conditional ctrl for final value that's not always there
 	try:
 		if tag4:
-			print("  -  %(tag4)s" % locals())
+			print(f"  -  {tag4}")
 	except:
 		break
 
@@ -59,7 +59,7 @@ while z < records_total:
 
 	# to print the image location
 	print("---")
-	print("![%(title)s](/img/%(title)s.png)" % locals())
+	print(f"![{title}](/img/{title}.png)")
 
 	# goal now is to write~print each list member to a file w file name item[0]
 
