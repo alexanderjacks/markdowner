@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+# R&D to direct all prints to an output file
+import sys
+sys.stdout = open('stdout_put.md','wt')
+
 # ready to open CSV
 filename = "heroes.csv"
 
@@ -72,4 +76,6 @@ while z < records_total:
 	z += 1
 	
 
+# unbreak python!
+sys.stdout = sys.__stdout__
 
