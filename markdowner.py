@@ -9,8 +9,8 @@ filename = "heroes.csv"
 # opens CSV data as list of lists
 with open(filename) as fn:
 	raw_content = fn.readlines()
-	# learns number of records in CSV data, offsets (why by 2? CSV header is 1 extra line)
-	records_total = len(raw_content) - 2
+	# notes number of records in CSV data
+	records_total = len(raw_content)
 	# removes carriagereturn chars leaves only newlines to mark lines
 	cleaner_content = [x.split('\r') for x in raw_content]
 
@@ -35,7 +35,7 @@ while z < records_total:
 	ally2 = hero_content[0][7]
 	ally3 = hero_content[0][8]
 
-	# create markdown file for list
+	# create markdown file
 	sys.stdout = open(f'./mds/{title.lower()}.md','wt')
 
 	# to print the static md
@@ -72,12 +72,13 @@ while z < records_total:
 
 	# # # END PRINTING .md FILE # # #
 
-	# goal now is to write~print each list member to a file w file name item[0]
-
-	# this loop climbs to len()-2 from 0
+	# this loop climbs to len from 0
 	z += 1
 	
+	# dev milestones:
+	# option to use 1st row of CSV as column/field names or ignore
+	# option to change output in other ways
 
-# unbreak python! fix core cmd back to default
+# unbreak python! fix core cmd output back to default
 sys.stdout = sys.__stdout__
 
