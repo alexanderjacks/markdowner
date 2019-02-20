@@ -3,6 +3,7 @@
 
 ## 🛵 Use
 - ```cd markdowner/``` (Go to this directory in Terminal.)
+- ```mkdir mds/```
 - ```python3 markdowner.py```
 - Creates files in ```./mds/```
 
